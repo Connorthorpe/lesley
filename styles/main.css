@@ -23,18 +23,35 @@ body {
 header .wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 10px; }
+  header .wrapper h1 {
+    border-bottom: white 2px solid;
+    padding-bottom: 6px; }
 
 .aboutMe {
   display: flex;
   flex-direction: row;
   height: 100%;
   padding-bottom: 50px; }
+  @media only screen and (min-width: 320px) and (max-width: 720px) {
+    .aboutMe {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      .aboutMe .textWrapper {
+        width: calc(100% - 80px); } }
+  @media only screen and (min-width: 720px) {
+    .aboutMe {
+      display: flex;
+      flex-direction: row; }
+      .aboutMe .textWrapper {
+        width: 50%; } }
   .aboutMe .textWrapper {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding: 0 40px; }
+    padding-left: 40px;
+    padding-right: 40px; }
     .aboutMe .textWrapper a {
       text-decoration: none;
       color: white; }
@@ -43,14 +60,29 @@ header .wrapper {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 50%; }
+    width: 50%;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    max-height: 400px; }
+    @media only screen and (min-width: 320px) and (max-width: 720px) {
+      .aboutMe .imageWrapper {
+        width: 100%; } }
     .aboutMe .imageWrapper img {
       width: auto;
-      max-height: 400px;
-      transform: rotate(90deg); }
+      height: 100%;
+      border-radius: 4px;
+      border: white 2px solid; }
+      @media only screen and (min-width: 320px) and (max-width: 720px) {
+        .aboutMe .imageWrapper img {
+          display: flex;
+          flex-direction: row;
+          justify-content: center; } }
 
 .map {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  width: 100%; }
+  .map iframe {
+    width: 100%; }
